@@ -1,0 +1,8 @@
+D:\Projetos\DddSuper\DddSuper.Repository\bin\Debug\netcoreapp2.2\DddSuper.Repository.deps.json
+D:\Projetos\DddSuper\DddSuper.Repository\bin\Debug\netcoreapp2.2\DddSuper.Repository.runtimeconfig.json
+D:\Projetos\DddSuper\DddSuper.Repository\bin\Debug\netcoreapp2.2\DddSuper.Repository.runtimeconfig.dev.json
+D:\Projetos\DddSuper\DddSuper.Repository\bin\Debug\netcoreapp2.2\DddSuper.Repository.dll
+D:\Projetos\DddSuper\DddSuper.Repository\obj\Debug\netcoreapp2.2\DddSuper.Repository.csprojAssemblyReference.cache
+D:\Projetos\DddSuper\DddSuper.Repository\obj\Debug\netcoreapp2.2\DddSuper.Repository.csproj.CoreCompileInputs.cache
+D:\Projetos\DddSuper\DddSuper.Repository\obj\Debug\netcoreapp2.2\DddSuper.Repository.AssemblyInfoInputs.cache
+D:\Projetos\DddSuper\DddSuper.Repository\obj\Debug\netcoreapp2.2\DddSuper.Repository.AssemblyInfo.cs
