@@ -13,6 +13,6 @@ namespace DddSuper.Aplication.Models
 
         public string NumeroAgencia { get; set; }
 
-        public UsuarioModel Usuario { get; set; }      
+        public string Cpf { get; set; }
     }
 }

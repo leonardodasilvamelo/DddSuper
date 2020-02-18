@@ -22,13 +22,18 @@ namespace DddSuper.Aplication.Services
 
         public async Task<bool> TransferenciaAsync(LancamentosModel lancamentosModel)
         {
-            var teste = lancamentosModel.ContaOrigem != lancamentosModel.ContaDestino;
+            if (lancamentosModel.ContaOrigem != lancamentosModel.ContaDestino)
+            {
+                var entity = new Lancamentos();
 
-            var entity = new Lancamentos();
+                var existeSaldo = await _iContaCorrenteService.ExiteSaldoSAsync(entity.ContaOrigem, entity.Valor);
 
-            var existeSaldo = await _iContaCorrenteService.ExiteSaldoSAsync(entity.ContaOrigem, entity.Valor);
-
-            return existeSaldo ? await _iLancamentosService.TransferirAscync(entity) : false;
+                return existeSaldo ? await _iLancamentosService.TransferirAscync(entity) : false;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

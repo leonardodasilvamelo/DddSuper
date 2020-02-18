@@ -13,7 +13,7 @@ namespace DddSuper.Aplication.Models
 
         public ContaCorrenteModel ContaDestino { get; set; }
 
-        public float Valor { get; set; }
+        public decimal Valor { get; set; }
 
     }
 }

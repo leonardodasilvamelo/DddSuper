@@ -12,3 +12,11 @@ D:\Projetos\DddSuper\DddSuper.Controller\obj\Debug\netcoreapp2.2\DddSuper.API.As
 D:\Projetos\DddSuper\DddSuper.Controller\obj\Debug\netcoreapp2.2\DddSuper.API.RazorTargetAssemblyInfo.cache
 D:\Projetos\DddSuper\DddSuper.Controller\obj\Debug\netcoreapp2.2\DddSuper.API.dll
 D:\Projetos\DddSuper\DddSuper.Controller\obj\Debug\netcoreapp2.2\DddSuper.API.pdb
+D:\Projetos\DddSuper\DddSuper.Controller\bin\Debug\netcoreapp2.2\DddSuper.Aplication.dll
+D:\Projetos\DddSuper\DddSuper.Controller\bin\Debug\netcoreapp2.2\DddSuper.Domain.dll
+D:\Projetos\DddSuper\DddSuper.Controller\bin\Debug\netcoreapp2.2\DddSuper.Infra.Data.dll
+D:\Projetos\DddSuper\DddSuper.Controller\bin\Debug\netcoreapp2.2\DddSuper.Aplication.pdb
+D:\Projetos\DddSuper\DddSuper.Controller\bin\Debug\netcoreapp2.2\DddSuper.Infra.Data.pdb
+D:\Projetos\DddSuper\DddSuper.Controller\bin\Debug\netcoreapp2.2\DddSuper.Domain.pdb
+D:\Projetos\DddSuper\DddSuper.Controller\obj\Debug\netcoreapp2.2\DddSuper.API.csproj.CopyComplete
+D:\Projetos\DddSuper\DddSuper.Controller\bin\Debug\netcoreapp2.2\DddSuper.API.xml

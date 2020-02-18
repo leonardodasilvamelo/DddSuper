@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DddSuper.Aplication.Interfaces;
+using DddSuper.Aplication.Services;
+using DddSuper.Domain.Interfaces.Repositories;
+using DddSuper.Domain.Interfaces.Services;
+using DddSuper.Domain.Services;
+using DddSuper.Infra.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
+using System.IO;
 
 namespace DddSuper.Controller
 {
@@ -26,6 +27,24 @@ namespace DddSuper.Controller
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "DDDSuper", Version = "V1" , Contact = new OpenApiContact {Name ="Leonardo Melo", Email= "leonardomelo.ti@gmail.com" } });
+            });
+
+
+
+            //Aplication
+            services.AddScoped<ILancamentosApp, LancamentosApp>();
+
+            //Service
+            services.AddScoped<IContaCorrenteService, ContaCorrenteService>();
+            services.AddScoped<ILancamentosService, LancamentosService>();
+
+            //Repository
+            services.AddScoped<IContaCorrenteRepository, ContaCorrenteRepository>();
+            services.AddScoped<ILancamentosRepository, LancamentosRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,8 +60,17 @@ namespace DddSuper.Controller
                 app.UseHsts();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.RoutePrefix = "swagger";
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Demo JWT Api");
+            });
+
             app.UseHttpsRedirection();
             app.UseMvc();
+
+        
         }
     }
 }

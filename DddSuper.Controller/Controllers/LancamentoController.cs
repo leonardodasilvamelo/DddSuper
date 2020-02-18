@@ -13,15 +13,15 @@ namespace DddSuper.API.Controllers
     [ApiController]
     public class LancamentoController : ControllerBase
     {
-
         ILancamentosApp _iLancamentosApp;
 
         public LancamentoController(ILancamentosApp iLancamentosAp) {
 
             _iLancamentosApp = iLancamentosAp;
-        }
+        }  
 
         [HttpPost]
+        [Route("transferencia")]
         public async Task<bool> TransferenciaAsync([FromBody]LancamentosModel lancamentosModel)
         {
             return await _iLancamentosApp.TransferenciaAsync(lancamentosModel);
