@@ -8,6 +8,6 @@ namespace DddSuper.Domain.Interfaces.Repositories
 {
     public interface ILancamentosRepository
     {
-        Task<bool> TransferirAscync(Lancamentos lancamentos);      
+        Task<bool> TransferirAscyncAsync(Lancamentos lancamentos);      
     }
 }

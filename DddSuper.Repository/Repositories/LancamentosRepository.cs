@@ -9,10 +9,15 @@ namespace DddSuper.Infra.Data.Repositories
 {
     public class LancamentosRepository : ILancamentosRepository
     {
+        //Informações são uma simulação do banco de dados. Se fosse caso real utilizaria o Dapper.
 
-        public Task<bool> TransferirAscync(Lancamentos lancamentos)
+        public async Task<bool> TransferirAscyncAsync(Lancamentos lancamentos)
         {
-            throw new NotImplementedException();
+            //Entendi que o repositório de lançamento para o caso de transferência deveria fazer 
+            // uma transação no banco de dados de debito e crédito e se caso desse qualquer erro, faria o rollback.
+
+            await Task.Delay(1);
+            return true;
         }
     }
 }

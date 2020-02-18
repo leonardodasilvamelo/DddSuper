@@ -24,7 +24,7 @@ namespace DddSuper.Domain.Services
 
             var saldo = await GetSaldoAsync(conta.Id);
 
-            return saldo < ValorDebitar;
+            return saldo >= ValorDebitar;
         }
 
         public async Task<decimal> GetSaldoAsync(Guid Id)

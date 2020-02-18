@@ -10,7 +10,7 @@ namespace DddSuper.Domain.Services
 {
     public class LancamentosService : ILancamentosService
     {
-        ILancamentosRepository _iLancamentosRepository;
+        private ILancamentosRepository _iLancamentosRepository;
 
         public LancamentosService(ILancamentosRepository iLancamentosRepositor) {
 
@@ -19,7 +19,7 @@ namespace DddSuper.Domain.Services
 
         public Task<bool> TransferirAscync(Lancamentos lancamentos)
         {
-            return _iLancamentosRepository.TransferirAscync(lancamentos);
+            return _iLancamentosRepository.TransferirAscyncAsync(lancamentos);
         }
     }
 }
