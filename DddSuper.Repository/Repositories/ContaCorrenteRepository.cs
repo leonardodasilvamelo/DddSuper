@@ -9,7 +9,7 @@ namespace DddSuper.Infra.Data.Repositories
 {
     public class ContaCorrenteRepository : IContaCorrenteRepository
     {
-        public Task<ContaCorrente> GetContaAsync(string NumeroConta, string NumeroAgencia, string Cpf)
+        public Task<ContaCorrente> GetContaAsync(string NumeroConta, string NumeroAgencia)
         {
             throw new NotImplementedException();
         }

@@ -10,6 +10,6 @@ namespace DddSuper.Domain.Interfaces.Repositories
     {
         Task<decimal> GetSaldoAsync(Guid id);
 
-        Task<ContaCorrente> GetContaAsync(string NumeroConta, string NumeroAgencia, string Cpf);
+        Task<ContaCorrente> GetContaAsync(string NumeroConta, string NumeroAgencia);
     }
 }

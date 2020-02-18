@@ -11,7 +11,5 @@ namespace DddSuper.Domain.Entities
 
         public string NumeroAgencia { get; set; }
 
-        public string Cpf { get; set; }
-
     }
 }

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace DddSuper.Aplication.Services
 {
@@ -13,18 +14,20 @@ namespace DddSuper.Aplication.Services
     {
         ILancamentosService _iLancamentosService;
         IContaCorrenteService _iContaCorrenteService;
+        private readonly IMapper _mapper;
 
-        public LancamentosApp(ILancamentosService iLancamentosService, IContaCorrenteService iContaCorrenteService)
+        public LancamentosApp(ILancamentosService iLancamentosService, IContaCorrenteService iContaCorrenteService, IMapper mapper)
         {
             _iLancamentosService = iLancamentosService;
             _iContaCorrenteService = iContaCorrenteService;
+            _mapper = mapper;
         }
 
         public async Task<bool> TransferenciaAsync(LancamentosModel lancamentosModel)
         {
             if (lancamentosModel.ContaOrigem != lancamentosModel.ContaDestino)
             {
-                var entity = new Lancamentos();
+                var entity = _mapper.Map<Lancamentos>(lancamentosModel);
 
                 var existeSaldo = await _iContaCorrenteService.ExiteSaldoSAsync(entity.ContaOrigem, entity.Valor);
 

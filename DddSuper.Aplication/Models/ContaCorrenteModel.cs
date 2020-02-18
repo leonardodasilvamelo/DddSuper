@@ -12,7 +12,5 @@ namespace DddSuper.Aplication.Models
         public string NumeroConta { get; set; }
 
         public string NumeroAgencia { get; set; }
-
-        public string Cpf { get; set; }
     }
 }

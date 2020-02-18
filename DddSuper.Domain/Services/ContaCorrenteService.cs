@@ -20,7 +20,7 @@ namespace DddSuper.Domain.Services
         public async Task<bool> ExiteSaldoSAsync(ContaCorrente contaCorrente, decimal ValorDebitar)
         {
 
-            var conta = await _iContaCorrenteRepository.GetContaAsync(contaCorrente.NumeroConta, contaCorrente.NumeroAgencia, contaCorrente.Cpf);
+            var conta = await _iContaCorrenteRepository.GetContaAsync(contaCorrente.NumeroConta, contaCorrente.NumeroAgencia);
 
             var saldo = await GetSaldoAsync(conta.Id);
 

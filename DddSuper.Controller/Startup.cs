@@ -1,4 +1,6 @@
-﻿using DddSuper.Aplication.Interfaces;
+﻿using AutoMapper;
+using DddSuper.Aplication.Interfaces;
+using DddSuper.Aplication.Mapping;
 using DddSuper.Aplication.Services;
 using DddSuper.Domain.Interfaces.Repositories;
 using DddSuper.Domain.Interfaces.Services;
@@ -26,6 +28,15 @@ namespace DddSuper.Controller
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new ContaCorrenteProfile());
+                mc.AddProfile(new LancamentoAppProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddSwaggerGen(options =>
