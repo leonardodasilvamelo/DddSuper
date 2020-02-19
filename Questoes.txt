@@ -1,0 +1,29 @@
+1) EXPLIQUE COM SUAS PALAVRAS O QUE É DOMAIN DRIVEN DESIGN E SUA IMPORTÂNCIA NA ESTRATÉGIA DE DESENVOLVIMENTO DE SOFTWARE.
+Resposta: É um conjunto de princípios para desenvolvimento de software baseado em domínio. No mundo onde as transformações acontecem rapidamente e as mudanças de escopo são recorrente, 
+		o ddd cai como uma luva devido a sua camada de domínio ser totalmente independente das outras camadas, podendo ser rapidamente adaptada.
+          Alinha o código com o négocio e dimunui o acoplamento.
+ 
+ 
+
+2) EXPLIQUE COM SUAS PALAVRAS O QUE É E COMO FUNCIONA UMA ARQUITETURA BASEADA EM MICROSERVICES. EXPLIQUE GANHOS COM ESTE MODELO E DESAFIOS EM SUA IMPLEMENTAÇÃO. 
+
+Resposta: Uma arquitetura baseada em microserviço é criar serviços mais exutos com responsabilidades específica. Ganhos são a flexibilidade , escalabilidade e manunteção simples.
+	Desafios em sua implementação variam desde do planejamento até custos. É necessário um estudo mais detalhado antes de construir , diferente dos sistemas monolitos. 
+	Importante automatizar os deploys e fazer o versionamento devido a evolução de cada micro-serviços.
+        Deve-se possuir ferramentas que facilitam o gerenciamentos dos micro-serviços e a criação de monitoramentos e logs são essêncial para identificar problemas.
+        E por último e não menos importante é a segurança com a comunicação e acesso que devem ser construida por um serviço responsável por isso. 
+        
+
+
+3) EXPLIQUE QUAL A DIFERENÇA ENTRE COMUNICAÇÃO SINCRONA E ASSINCRONA E QUAL O MELHOR CENÁRIO PARA UTILIZAR UMA OU OUTRA. 
+
+Resposta:  
+	COMUNICAÇÃO SINCRONA significa que a comunicação entre o emissor e o receptor devem estar sincronizada e na ordem. O cenário ideal para os casos que uma ação
+             deve esperar o retorno de outra ação, utilizando as vezes o retorno da primeira para utilizar na segunda ação ou simplismente a necessidade de executar na ordem.
+
+        COMUNICAÇÃO ASSINCRONA significa que a comunicação entre o emissor e o receptor não precisam estar sincronizada e podem ser executadas em ordens diferentes. O cenário
+             ideal é quando uma ação não depende da outra para ser executado melhorando o tempo de reposta.
+		
+
+
+
