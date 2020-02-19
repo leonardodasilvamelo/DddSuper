@@ -12,3 +12,12 @@
 /.vs/DddSuper/v15/Server/sqlite3
 /.vs/DddSuper/DesignTimeBuild
 /.vs/DddSuper/v15
+/DddSuper.Aplication/obj
+obj
+/DddSuper.Controller/obj
+/DddSuper.Controller/bin
+/DddSuper.Domain/obj
+/DddSuper.Repository/obj
+/DddSuper.Repository/bin
+/DddSuper.Test/obj
+/DddSuper.Test/bin
