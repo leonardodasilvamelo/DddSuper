@@ -17,6 +17,7 @@ namespace DddSuper.Test.Service
             _iContaCorrenteService = iContaCorrenteService;
         }
 
+        [Fact]
         public async void Deve_exibir_saldo_com_sucesso() {
 
 
@@ -24,6 +25,7 @@ namespace DddSuper.Test.Service
             Assert.True(result > 0, "Saldo retornado com sucesso");
         }
 
+        [Fact]
         public async void Deve_verificar_saldo_com_sucesso()
         {
             var entity = new ContaCorrente { NumeroAgencia = "1234", NumeroConta = "1234567" };
@@ -32,6 +34,7 @@ namespace DddSuper.Test.Service
             Assert.True(result, "Existe saldo para tranferência");
         }
 
+        [Fact]
         public async void Deve_verificar_saldo_com_erro()
         {
             var entity = new ContaCorrente { NumeroAgencia = "1234", NumeroConta = "1234567" };
